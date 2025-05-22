@@ -38,15 +38,16 @@ public class MusicManager : MonoBehaviour
 
     public void PlayMainMenuMusic()
     {
-        PlayMusic(mainMenuMusic);
+        PlayMusic(mainMenuMusic); 
     }
 
     public void PlayGameplayMusic()
     {
-        PlayMusic(gameplayMusic);
+        PlayMusic(gameplayMusic); 
     }
+
     public void PlayGamePlayMusic()
     {
-        PlayGameplayMusic();
+        PlayGameplayMusic(); 
     }
 }
