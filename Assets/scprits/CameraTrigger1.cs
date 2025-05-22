@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class CameraTrigger1 : MonoBehaviour
 {
-    public Transform cameraInsidePoint;    // Позиция при входе в триггер
-    public Transform cameraOutsidePoint;   // Позиция при выходе из триггера
+    public Transform cameraInsidePoint;  
+    public Transform cameraOutsidePoint;
     
     private Camera mainCamera;
 
