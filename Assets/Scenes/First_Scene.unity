@@ -236,7 +236,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -93.77997, y: 84.17}
+  m_AnchoredPosition: {x: -93.77995, y: 84.17}
   m_SizeDelta: {x: -272.25998, y: -236.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &20313112
@@ -11706,6 +11706,7 @@ GameObject:
   - component: {fileID: 640984221}
   - component: {fileID: 640984220}
   - component: {fileID: 640984219}
+  - component: {fileID: 640984223}
   m_Layer: 0
   m_Name: gramota_0
   m_TagString: Untagged
@@ -11843,6 +11844,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1943693}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &640984223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640984218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88833794d279fd4419bdd9c11d195954, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToAdd: {fileID: 11400000, guid: f3ff87aefe10ef14ea1934d581410b04, type: 2}
 --- !u!1 &644058896
 GameObject:
   m_ObjectHideFlags: 0
@@ -19529,6 +19543,7 @@ GameObject:
   - component: {fileID: 1177629904}
   - component: {fileID: 1177629903}
   - component: {fileID: 1177629902}
+  - component: {fileID: 1177629905}
   m_Layer: 0
   m_Name: ring_0
   m_TagString: Untagged
@@ -19666,6 +19681,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1177629905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177629900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88833794d279fd4419bdd9c11d195954, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToAdd: {fileID: 11400000, guid: bd9104c9438737843a443325ce75f060, type: 2}
 --- !u!1 &1182086511
 GameObject:
   m_ObjectHideFlags: 0
@@ -24037,6 +24065,7 @@ GameObject:
   - component: {fileID: 1529684347}
   - component: {fileID: 1529684346}
   - component: {fileID: 1529684345}
+  - component: {fileID: 1529684348}
   m_Layer: 0
   m_Name: toy_0
   m_TagString: Untagged
@@ -24174,6 +24203,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1529684348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529684343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88833794d279fd4419bdd9c11d195954, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToAdd: {fileID: 11400000, guid: 78e24eb72d2762240819efd940258b91, type: 2}
 --- !u!1 &1533233387
 GameObject:
   m_ObjectHideFlags: 0
@@ -30990,6 +31032,7 @@ GameObject:
   - component: {fileID: 1944824216}
   - component: {fileID: 1944824215}
   - component: {fileID: 1944824214}
+  - component: {fileID: 1944824217}
   m_Layer: 0
   m_Name: football_0
   m_TagString: Untagged
@@ -31127,6 +31170,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1944824217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944824212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88833794d279fd4419bdd9c11d195954, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToAdd: {fileID: 11400000, guid: 99dc9367312c9a1428318cdd5538ba7d, type: 2}
 --- !u!1 &1951466615
 GameObject:
   m_ObjectHideFlags: 0
