@@ -7178,7 +7178,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 30.832611, y: -13.980728}
+  m_Offset: {x: 62.83261, y: -13.980728}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -7188,7 +7188,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 126.715836, y: 71.38185}
+  m_Size: {x: 196.7158, y: 71.38185}
   m_EdgeRadius: 0
 --- !u!4 &349458483
 Transform:
@@ -13862,6 +13862,50 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 400364384}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &765393532
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 765393534}
+  - component: {fileID: 765393533}
+  m_Layer: 0
+  m_Name: "\u043E\u0442\u043B\u0430\u0434\u043A\u0430"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &765393533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765393532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b40a912d533644da814cdafd33ccf71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &765393534
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765393532}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 36.33422, y: -2.31141, z: 0}
+  m_LocalScale: {x: 0.3208769, y: 0.3208769, z: 0.3208769}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &781437960
 GameObject:
@@ -23060,6 +23104,50 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 7.97, y: 7.94}
   m_EdgeRadius: 0
+--- !u!1 &1456047183
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1456047185}
+  - component: {fileID: 1456047184}
+  m_Layer: 0
+  m_Name: musicStarter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1456047184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456047183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a732ac703cfa84736aa8c5691d7c23f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1456047185
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456047183}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 36.33422, y: -2.31141, z: 0}
+  m_LocalScale: {x: 0.3208769, y: 0.3208769, z: 0.3208769}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1462457010
 GameObject:
   m_ObjectHideFlags: 0
@@ -31683,8 +31771,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 85a9712f8610b4caa9c6d5216065f6b5, type: 3}
-  m_Resource: {fileID: 8300000, guid: 85a9712f8610b4caa9c6d5216065f6b5, type: 3}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -31898,7 +31986,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMenuMusic: {fileID: 8300000, guid: 85a9712f8610b4caa9c6d5216065f6b5, type: 3}
-  gameplayMusic: {fileID: 0}
+  gameplayMusic: {fileID: 8300000, guid: 85a9712f8610b4caa9c6d5216065f6b5, type: 3}
 --- !u!4 &1956894691
 Transform:
   m_ObjectHideFlags: 0
@@ -34946,6 +35034,8 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1956894691}
+  - {fileID: 1456047185}
+  - {fileID: 765393534}
   - {fileID: 835500461}
   - {fileID: 711700576}
   - {fileID: 400364384}
