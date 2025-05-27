@@ -2,10 +2,12 @@ using UnityEngine;
 
 public class CameraTrigger1 : MonoBehaviour
 {
-    public Transform cameraInsidePoint;  
+    public Transform cameraInsidePoint;
     public Transform cameraOutsidePoint;
-    
+
     private Camera mainCamera;
+
+    public static bool cameraLocked = false; // Глобальный флаг
 
     void Start()
     {
@@ -14,7 +16,7 @@ public class CameraTrigger1 : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && cameraInsidePoint != null)
+        if (other.CompareTag("Player") && cameraInsidePoint != null && !cameraLocked)
         {
             SetCameraPosition(cameraInsidePoint);
         }
@@ -22,7 +24,7 @@ public class CameraTrigger1 : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && cameraOutsidePoint != null)
+        if (other.CompareTag("Player") && cameraOutsidePoint != null && !cameraLocked)
         {
             SetCameraPosition(cameraOutsidePoint);
         }
