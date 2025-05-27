@@ -1,0 +1,89 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\UseR\\Desktop\\skuf\\Survival_Skufyara\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\UseR\\Desktop\\skuf\\Survival_Skufyara\\Assets\\scprits\\EnemyScripts\\EnemyKillZone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\scprits\\EnemyScripts\\EnemyKillZone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\UseR\\Desktop\\skuf\\Survival_Skufyara\\Assets\\scprits\\EnemyScripts\\AggroTrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\scprits\\EnemyScripts\\AggroTrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\UseR\\Desktop\\skuf\\Survival_Skufyara\\Assets\\scprits\\EnemyScripts\\EnemyWander.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\scprits\\EnemyScripts\\EnemyWander.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\UseR\\Desktop\\skuf\\Survival_Skufyara\\Assets\\scprits\\InventoryUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\scprits\\InventoryUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EnemyKillZone.cs",
+              "DocumentMoniker": "C:\\Users\\UseR\\Desktop\\skuf\\Survival_Skufyara\\Assets\\scprits\\EnemyScripts\\EnemyKillZone.cs",
+              "RelativeDocumentMoniker": "Assets\\scprits\\EnemyScripts\\EnemyKillZone.cs",
+              "ToolTip": "C:\\Users\\UseR\\Desktop\\skuf\\Survival_Skufyara\\Assets\\scprits\\EnemyScripts\\EnemyKillZone.cs",
+              "RelativeToolTip": "Assets\\scprits\\EnemyScripts\\EnemyKillZone.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T14:58:22.684Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AggroTrigger.cs",
+              "DocumentMoniker": "C:\\Users\\UseR\\Desktop\\skuf\\Survival_Skufyara\\Assets\\scprits\\EnemyScripts\\AggroTrigger.cs",
+              "RelativeDocumentMoniker": "Assets\\scprits\\EnemyScripts\\AggroTrigger.cs",
+              "ToolTip": "C:\\Users\\UseR\\Desktop\\skuf\\Survival_Skufyara\\Assets\\scprits\\EnemyScripts\\AggroTrigger.cs",
+              "RelativeToolTip": "Assets\\scprits\\EnemyScripts\\AggroTrigger.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T14:19:17.773Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EnemyWander.cs",
+              "DocumentMoniker": "C:\\Users\\UseR\\Desktop\\skuf\\Survival_Skufyara\\Assets\\scprits\\EnemyScripts\\EnemyWander.cs",
+              "RelativeDocumentMoniker": "Assets\\scprits\\EnemyScripts\\EnemyWander.cs",
+              "ToolTip": "C:\\Users\\UseR\\Desktop\\skuf\\Survival_Skufyara\\Assets\\scprits\\EnemyScripts\\EnemyWander.cs",
+              "RelativeToolTip": "Assets\\scprits\\EnemyScripts\\EnemyWander.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAwwEIAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T13:19:21.631Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "InventoryUI.cs",
+              "DocumentMoniker": "C:\\Users\\UseR\\Desktop\\skuf\\Survival_Skufyara\\Assets\\scprits\\InventoryUI.cs",
+              "RelativeDocumentMoniker": "Assets\\scprits\\InventoryUI.cs",
+              "ToolTip": "C:\\Users\\UseR\\Desktop\\skuf\\Survival_Skufyara\\Assets\\scprits\\InventoryUI.cs",
+              "RelativeToolTip": "Assets\\scprits\\InventoryUI.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAwwIgAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T18:19:31.305Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

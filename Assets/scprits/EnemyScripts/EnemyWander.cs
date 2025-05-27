@@ -4,15 +4,23 @@ public class EnemyWander : MonoBehaviour
 {
     public float speed = 2f;
     public float directionChangeInterval = 2f;
+
     public Sprite spriteForward;
     public Sprite spriteBack;
-    public Transform playerRespawnPoint;
-    public Transform cameraRespawnPoint;
+    public Sprite spriteLeft;
+    public Sprite spriteRight;
+
+    public Sprite spriteForwardAxe;
+    public Sprite spriteBackAxe;
+    public Sprite spriteLeftAxe;
+    public Sprite spriteRightAxe;
 
     private Rigidbody2D rb;
     private Vector2 moveDirection;
     private float timer;
     private SpriteRenderer spriteRenderer;
+
+    private bool aggressiveMode = false;
 
     void Start()
     {
@@ -40,11 +48,28 @@ public class EnemyWander : MonoBehaviour
     {
         float angle = Random.Range(0f, 360f) * Mathf.Deg2Rad;
         moveDirection = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)).normalized;
+        UpdateSprite();
+    }
 
-        if (moveDirection.y > 0)
-            spriteRenderer.sprite = spriteBack;
+    void UpdateSprite()
+    {
+        Sprite newSprite = null;
+
+        if (Mathf.Abs(moveDirection.x) > Mathf.Abs(moveDirection.y))
+        {
+            newSprite = moveDirection.x > 0
+                ? (aggressiveMode ? spriteRightAxe : spriteRight)
+                : (aggressiveMode ? spriteLeftAxe : spriteLeft);
+        }
         else
-            spriteRenderer.sprite = spriteForward;
+        {
+            if (moveDirection.y > 0)
+                newSprite = aggressiveMode ? spriteBackAxe : spriteBack;
+            else
+                newSprite = aggressiveMode ? spriteForwardAxe : spriteForward;
+        }
+
+        spriteRenderer.sprite = newSprite;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -53,18 +78,13 @@ public class EnemyWander : MonoBehaviour
         {
             Vector2 normal = collision.contacts[0].normal;
             moveDirection = Vector2.Reflect(moveDirection, normal);
+            UpdateSprite();
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    public void SetAggressive(bool state)
     {
-        if (other.CompareTag("Player"))
-        {
-            other.transform.position = playerRespawnPoint.position;
-            Camera.main.transform.position = new Vector3(
-                cameraRespawnPoint.position.x,
-                cameraRespawnPoint.position.y,
-                Camera.main.transform.position.z);
-        }
+        aggressiveMode = state;
+        UpdateSprite();
     }
 }
