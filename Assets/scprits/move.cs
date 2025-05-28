@@ -2,10 +2,12 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(SpriteRenderer), typeof(AudioSource))]
 public class movee : MonoBehaviour
-{
+{   
+    public static movee Instance;
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     private Vector2 moveVector;
+    private bool canMove = true;
 
     [Header("Movement")]
     public float speed = 5f;
@@ -43,7 +45,7 @@ public class movee : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-
+        Instance = this;
         if (standartPoz != null)
             spriteRenderer.sprite = standartPoz;
 
@@ -57,8 +59,12 @@ public class movee : MonoBehaviour
         currentAnimationSprites = null;
     }
 
+    public void SetMovementEnabled(bool enabled) => canMove = enabled;
+    
+
     void Update()
-    {
+    {   
+        if(!canMove) return;
         if (isMovementLocked)
         {
             moveVector = Vector2.zero;
@@ -82,7 +88,8 @@ public class movee : MonoBehaviour
     }
 
     void UpdateAnimation()
-    {
+    {   
+        if(!canMove) return;
         if (isMovementLocked)
         {
             if (spriteRenderer.sprite != standartPoz && standartPoz != null)

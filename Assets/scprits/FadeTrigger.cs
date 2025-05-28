@@ -9,10 +9,13 @@ public class FadeTrigger : MonoBehaviour
     public float darkTime = 1.5f;
     public Canvas fadeCanvas;
     private bool playerInside = false;
+    private bool isActive = false;
+
+    public void SetActive() => isActive = true;
 
     void Update()
-    {
-        if (playerInside && Input.GetKeyDown(KeyCode.F))
+    {   
+        if (isActive && playerInside && Input.GetKeyDown(KeyCode.F))
         {
             StartCoroutine(FadeRoutine());
         }
@@ -29,20 +32,22 @@ public class FadeTrigger : MonoBehaviour
     }
 
     private IEnumerator FadeTo(float targetAlpha)
-    {
-        float startAlpha = fadeImage.color.a;
-        float t = 0f;
+    {   
+        movee.Instance.SetMovementEnabled(false);
+        var startAlpha = fadeImage.color.a;
+        var t = 0f;
 
         while (t < fadeDuration)
         {
             t += Time.deltaTime;
-            float blend = Mathf.Clamp01(t / fadeDuration);
-            float alpha = Mathf.Lerp(startAlpha, targetAlpha, blend);
+            var blend = Mathf.Clamp01(t / fadeDuration);
+            var alpha = Mathf.Lerp(startAlpha, targetAlpha, blend);
             fadeImage.color = new Color(0f, 0f, 0f, alpha);
             yield return null;
         }
 
         fadeImage.color = new Color(0f, 0f, 0f, targetAlpha);
+        movee.Instance.SetMovementEnabled(true);
     }
 
     void OnTriggerEnter2D(Collider2D other)

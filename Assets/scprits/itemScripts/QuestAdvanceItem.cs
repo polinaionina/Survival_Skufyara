@@ -11,8 +11,9 @@ public class QuestAdvanceItem : InventoryItem
         if (obj != null)
         {
             var teleportScript = obj.GetComponent<TeleportOnTrigger>();
-            if (teleportScript != null)
-                teleportScript.SetActive(); 
+            if (teleportScript != null) teleportScript.SetActive(); 
+            var faderScript = obj.GetComponent<FadeTrigger>();
+            if (faderScript != null) faderScript.SetActive(); 
         }
 
         QuestManager.Instance?.TriggerNextQuest();
