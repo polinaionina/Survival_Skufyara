@@ -4841,6 +4841,8 @@ GameObject:
   m_Component:
   - component: {fileID: 217114393}
   - component: {fileID: 217114394}
+  - component: {fileID: 217114396}
+  - component: {fileID: 217114395}
   m_Layer: 0
   m_Name: enddoor_0
   m_TagString: Untagged
@@ -4918,6 +4920,71 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &217114395
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217114392}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -1.1262608, y: -10.981149}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 10.86, y: 17.64}
+    newSize: {x: 10.86, y: 17.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 16.491354, y: 13.698046}
+  m_EdgeRadius: 0
+--- !u!114 &217114396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217114392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfbf7d92de8df644cafd962e4465e917, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleportTarget: {fileID: 0}
+  newSprite: {fileID: 0}
+  CameraPosX: 0
+  CameraPosY: 0
+  NeededAction: 1
+  isActive: 0
+  teleportDelay: 0
 --- !u!1 &233474035
 GameObject:
   m_ObjectHideFlags: 0
@@ -12259,7 +12326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88833794d279fd4419bdd9c11d195954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToAdd: {fileID: 11400000, guid: f3ff87aefe10ef14ea1934d581410b04, type: 2}
+  itemToAdd: {fileID: 11400000, guid: 19b51afc5b1dbf34da00b9147d21fde9, type: 2}
 --- !u!1 &644058896
 GameObject:
   m_ObjectHideFlags: 0
@@ -16724,7 +16791,6 @@ GameObject:
   - component: {fileID: 973067715}
   - component: {fileID: 973067714}
   - component: {fileID: 973067713}
-  - component: {fileID: 973067712}
   - component: {fileID: 973067716}
   m_Layer: 0
   m_Name: "\u043F\u0438\u0430\u043D\u0438\u043D\u043E_0 (1)"
@@ -16733,27 +16799,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &973067712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 973067711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7088d2de9e11f9a489dfd271040cf884, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprites:
-  - {fileID: -7577300398678389092, guid: c416808398f20b64884c33d434ac3661, type: 3}
-  - {fileID: 7402519683724341035, guid: 6c05347257e28024b95511f46b605291, type: 3}
-  - {fileID: -5848383421814352918, guid: c2450e2db39f0f048a876fd7ef28cab2, type: 3}
-  - {fileID: -7872758665052154968, guid: 3e1b1ef75b7bfc243aa21f57c5a89de6, type: 3}
-  newSprite: {fileID: -7597360845799512477, guid: 207a460d0f2f63f4fb67705bace7482d, type: 3}
-  spriteTime: 0.1
-  clip: {fileID: 8300000, guid: 69b83f61d4ca04bc2bd0004a2e92e276, type: 3}
-  source: {fileID: 973067716}
 --- !u!61 &973067713
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20345,7 +20390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88833794d279fd4419bdd9c11d195954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToAdd: {fileID: 11400000, guid: bd9104c9438737843a443325ce75f060, type: 2}
+  itemToAdd: {fileID: 11400000, guid: 498303ebd9e66e240af118b8933ef107, type: 2}
 --- !u!1 &1182086511
 GameObject:
   m_ObjectHideFlags: 0
@@ -25473,7 +25518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88833794d279fd4419bdd9c11d195954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToAdd: {fileID: 11400000, guid: 78e24eb72d2762240819efd940258b91, type: 2}
+  itemToAdd: {fileID: 11400000, guid: 199986d75aeb76d40a486e2f152b2859, type: 2}
 --- !u!1 &1533233387
 GameObject:
   m_ObjectHideFlags: 0
@@ -32830,7 +32875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88833794d279fd4419bdd9c11d195954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToAdd: {fileID: 11400000, guid: 99dc9367312c9a1428318cdd5538ba7d, type: 2}
+  itemToAdd: {fileID: 11400000, guid: 6a13dd92f257da048adfd8c2b58a8445, type: 2}
 --- !u!1 &1951466615
 GameObject:
   m_ObjectHideFlags: 0

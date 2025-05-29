@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 285fc835dabf85c44849e95e91e0af22, type: 3}
-  m_Name: ringItem
+  m_Script: {fileID: 11500000, guid: a0a851ca5a7da384abb2fa8cd18bd885, type: 3}
+  m_Name: ringCollectItem
   m_EditorClassIdentifier: 
   itemName: "\u041A\u043E\u043B\u044C\u0446\u043E"
   icon: {fileID: -2532087816333192471, guid: 605fdc1c32944b949ba69376908fbd84, type: 3}

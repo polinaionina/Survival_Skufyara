@@ -1,4 +1,5 @@
 using UnityEngine;
+[CreateAssetMenu(menuName = "Inventory/QuestAdvance")]
 public class QuestAdvanceItem : InventoryItem
 {
     public string targetObjectName; 

@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 285fc835dabf85c44849e95e91e0af22, type: 3}
-  m_Name: toyItem
+  m_Script: {fileID: 11500000, guid: a0a851ca5a7da384abb2fa8cd18bd885, type: 3}
+  m_Name: toyCollectITem
   m_EditorClassIdentifier: 
   itemName: "\u041C\u0438\u0448\u043A\u0430"
   icon: {fileID: 1511849832365779204, guid: 7eea7aca10a82e74e83b5ac241c62cf4, type: 3}
