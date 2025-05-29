@@ -236,7 +236,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -93.77995, y: 84.17}
+  m_AnchoredPosition: {x: -93.77997, y: 84.17}
   m_SizeDelta: {x: -272.25998, y: -236.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &20313112
@@ -11145,6 +11145,7 @@ GameObject:
   - component: {fileID: 594567074}
   - component: {fileID: 594567073}
   - component: {fileID: 594567072}
+  - component: {fileID: 594567075}
   m_Layer: 0
   m_Name: Trigger3SMS
   m_TagString: Untagged
@@ -11282,6 +11283,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &594567075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 594567070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac8f85e39324e5a4faf87ba981f37f5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &596144499
 GameObject:
   m_ObjectHideFlags: 0
@@ -14324,6 +14337,7 @@ GameObject:
   - component: {fileID: 781437963}
   - component: {fileID: 781437962}
   - component: {fileID: 781437961}
+  - component: {fileID: 781437965}
   m_Layer: 0
   m_Name: Trigger1SMS
   m_TagString: Untagged
@@ -14461,6 +14475,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1707813208}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &781437965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781437960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac8f85e39324e5a4faf87ba981f37f5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &788971976
 GameObject:
   m_ObjectHideFlags: 0
@@ -20849,6 +20875,7 @@ GameObject:
   - component: {fileID: 1223280458}
   - component: {fileID: 1223280457}
   - component: {fileID: 1223280456}
+  - component: {fileID: 1223280460}
   m_Layer: 0
   m_Name: Trigger2SMS
   m_TagString: Untagged
@@ -20986,6 +21013,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1707813208}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1223280460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223280455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac8f85e39324e5a4faf87ba981f37f5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1224225901
 GameObject:
   m_ObjectHideFlags: 0
@@ -36078,6 +36117,7 @@ GameObject:
   - component: {fileID: 2110574250}
   - component: {fileID: 2110574249}
   - component: {fileID: 2110574248}
+  - component: {fileID: 2110574251}
   m_Layer: 0
   m_Name: Trigger4SMS
   m_TagString: Untagged
@@ -36215,6 +36255,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2110574251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110574246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac8f85e39324e5a4faf87ba981f37f5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2112039545
 GameObject:
   m_ObjectHideFlags: 0
