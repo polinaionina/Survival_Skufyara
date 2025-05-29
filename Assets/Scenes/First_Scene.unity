@@ -4522,7 +4522,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5710317414785350999, guid: 5f333a3a7b25015488756affb475ba73, type: 3}
+  m_Sprite: {fileID: -3212786571114110223, guid: 6b0e70af5cd762145b3ced026b055b00, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -34996,7 +34996,7 @@ MonoBehaviour:
   inputField: {fileID: 513958542}
   feedbackText: {fileID: 1438366444}
   confirmButton: {fileID: 1443559511}
-  correctAnswer: 8290157346
+  correctAnswer: 116
   objectsToDisable:
   - {fileID: 164427585}
   - {fileID: 1443559507}
