@@ -18,6 +18,7 @@ public class CollectiblePart : InventoryItem
         GameObject obj = GameObject.Find("enddoor_0");
         var teleportScript = obj.GetComponent<TeleportOnTrigger>();
         if (teleportScript != null) teleportScript.SetActive(); 
+        QuestManager.Instance?.TriggerNextQuest();
     }
 
     public static void ResetUsedCount()

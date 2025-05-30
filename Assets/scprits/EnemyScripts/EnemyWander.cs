@@ -1,7 +1,8 @@
 using UnityEngine;
 
 public class EnemyWander : MonoBehaviour
-{
+{   
+    public static EnemyWander Instanсe;
     public float speed = 2f;
     public float directionChangeInterval = 2f;
 
@@ -17,27 +18,33 @@ public class EnemyWander : MonoBehaviour
 
     private Rigidbody2D rb;
     private Vector2 moveDirection;
-    private float timer;
+    private float timer = 2f;
     private SpriteRenderer spriteRenderer;
 
+    private bool isActive = false;
     private bool aggressiveMode = false;
 
     void Start()
-    {
+    {   
+        Instanсe = this;
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        ChooseNewDirection();
     }
 
     void Update()
-    {
-        timer += Time.deltaTime;
-        if (timer >= directionChangeInterval)
-        {
-            ChooseNewDirection();
-            timer = 0f;
+    {   
+        if (isActive)
+        {   
+            timer += Time.deltaTime;
+            if (timer >= directionChangeInterval)
+            {
+                ChooseNewDirection();
+                timer = 0f;
+            }
         }
     }
+    
+    public void SetActive() => isActive = true;
 
     void FixedUpdate()
     {
@@ -46,7 +53,7 @@ public class EnemyWander : MonoBehaviour
 
     void ChooseNewDirection()
     {
-        float angle = Random.Range(0f, 360f) * Mathf.Deg2Rad;
+        var angle = Random.Range(0f, 360f) * Mathf.Deg2Rad;
         moveDirection = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)).normalized;
         UpdateSprite();
     }
