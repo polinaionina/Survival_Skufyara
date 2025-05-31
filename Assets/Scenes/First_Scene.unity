@@ -5654,9 +5654,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTeleportTarget: {fileID: 2110574247}
   cameraTeleportTarget: {fileID: 1198403331}
-  isActive: 1
-  playerTag: Player
+  newSprite: {fileID: 2154967607436499363, guid: 506c4883ede4f8b458b3ea64bb31bf43, type: 3}
+  player: {fileID: 395462750}
+  isActive: 0
   delayAfterTeleport: 0.2
+  playerTag: Player
 --- !u!1 &233474035
 GameObject:
   m_ObjectHideFlags: 0

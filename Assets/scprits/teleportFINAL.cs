@@ -6,15 +6,20 @@ public class teleportFINAL : MonoBehaviour
     [Header("Teleport Settings")]
     public Transform playerTeleportTarget; // Куда телепортировать игрока
     public Transform cameraTeleportTarget; // Куда переместить камеру
+    public Sprite newSprite;
+    private Sprite originalSprite;
+    private SpriteRenderer spriteRenderer;
+    private bool playerIsInside = false;
+    public Transform player;
 
     [Header("Activation Settings")]
-    public bool isActive = true; // По умолчанию телепорт активен. Установите false, если он должен быть активирован позже.
+    public bool isActive = false; // По умолчанию телепорт активен. Установите false, если он должен быть активирован позже.
+
+    [Header("Timing Settings")]
+    public float delayAfterTeleport = 0.2f; 
 
     [Header("Player Tag")]
     public string playerTag = "Player"; // Тег объекта игрока
-
-    [Header("Timing Settings")]
-    public float delayAfterTeleport = 0.2f; // Задержка перед разблокировкой камеры
 
     // Публичный метод для активации телепорта из другого скрипта
     public void ActivateTeleport()
@@ -30,35 +35,36 @@ public class teleportFINAL : MonoBehaviour
         Debug.Log(gameObject.name + " teleport deactivated.");
     }
 
+    void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        originalSprite = spriteRenderer.sprite;
+    }
+
+    void Update()
+    {   
+        if (isActive && playerIsInside && Input.GetKeyDown(KeyCode.F))
+        {
+            StartCoroutine(TeleportSequence(player));
+        }
+    }
+                
+
     void OnTriggerEnter2D(Collider2D other)
     {
-        // Проверяем, активен ли телепорт и вошел ли игрок
-        if (!isActive)
-        {
-            // Если телепорт не активен, ничего не делаем
-            return;
+        if (isActive && other.CompareTag("Player")){
+            spriteRenderer.sprite = newSprite;
+            playerIsInside = true;
         }
+    }
 
-        if (!other.CompareTag(playerTag))
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
         {
-            // Если это не игрок, ничего не делаем
-            return;
+            spriteRenderer.sprite = originalSprite;
+            playerIsInside = false;
         }
-
-        // Проверяем, назначены ли цели
-        if (playerTeleportTarget == null)
-        {
-            Debug.LogError("TeleportWithSimilarCameraLogic: Player Teleport Target не назначен на объекте " + gameObject.name, this);
-            return;
-        }
-        if (cameraTeleportTarget == null)
-        {
-            Debug.LogError("TeleportWithSimilarCameraLogic: Camera Teleport Target не назначен на объекте " + gameObject.name, this);
-            return;
-        }
-        
-        // Если все проверки пройдены, запускаем корутину телепортации
-        StartCoroutine(TeleportSequence(other.transform));
     }
 
     IEnumerator TeleportSequence(Transform playerTransform)
@@ -81,8 +87,7 @@ public class teleportFINAL : MonoBehaviour
         // 2. Перемещаем игрока
         playerTransform.position = playerTeleportTarget.position;
         Debug.Log(playerTransform.name + " teleported to " + playerTeleportTarget.position);
-
-        // 3. Перемещаем основную камеру
+          // 3. Перемещаем основную камеру
         if (Camera.main != null)
         {
             Vector3 newCameraPosition = new Vector3(

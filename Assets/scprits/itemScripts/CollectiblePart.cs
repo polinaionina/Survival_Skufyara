@@ -16,18 +16,16 @@ public class CollectiblePart : InventoryItem
     {   
         Debug.Log("Все предметы собраны");
         GameObject obj = GameObject.Find("enddoor_0");
-        var teleportScript = obj.GetComponent<TeleportOnTrigger>();
-        if (teleportScript != null) teleportScript.SetActive(); 
+        var teleportScript = obj.GetComponent<teleportFINAL>();
+        if (teleportScript != null) teleportScript.ActivateTeleport();
         QuestManager.Instance?.TriggerNextQuest();
     }
 
-    public static void ResetUsedCount()
-    {
+    public static void ResetUsedCount() =>
         usedPartsCount = 0;
-    }
+    
 
-    public static int GetUsedCount()
-    {
-        return usedPartsCount;
-    }
+    public static int GetUsedCount() =>
+        usedPartsCount;
+    
 }

@@ -8,7 +8,7 @@ public class AddToInventoryOnDisable : MonoBehaviour
     {
         if (InventoryUI.Instance != null)
         {
-            bool success = InventoryUI.Instance.AddItem(itemToAdd);
+            var success = InventoryUI.Instance.AddItem(itemToAdd);
         }
     }
 }
