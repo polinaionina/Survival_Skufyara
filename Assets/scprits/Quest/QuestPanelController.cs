@@ -9,22 +9,27 @@ public class QuestPanelController : MonoBehaviour
     public TMP_Text feedbackText;
     public Button confirmButton;
     public string correctAnswer = "unity";
-    
+
     [Header("Объекты для управления")]
     [Tooltip("Объекты, которые нужно выключить при правильном ответе")]
     public GameObject[] objectsToDisable;
-    
+
     [Tooltip("Необязательно: объект, который нужно включить при правильном ответе")]
-    public GameObject objectToEnable;     
-    
+    public GameObject objectToEnable;
+
     public movee playerMovement;
+
+    [Header("Настройки уведомлений")]
+    public NotificationPanelController notificationPanelController; // Ссылка на NotificationPanelController
+    [Tooltip("Изображение уведомления")]
+    public Sprite notificationImage;
 
     private void Start()
     {
         gameObject.SetActive(false);
         feedbackText.gameObject.SetActive(false);
         confirmButton.onClick.AddListener(CheckAnswer);
-        
+
         // Выключаем объект при старте, если он задан
         if (objectToEnable != null)
         {
@@ -63,14 +68,20 @@ public class QuestPanelController : MonoBehaviour
             {
                 if (obj != null) obj.SetActive(false);
             }
-            
+
             // Включаем нужный объект, если он указан
             if (objectToEnable != null)
             {
                 objectToEnable.SetActive(true);
             }
-            
-            HideQuest();
+
+            HideQuest(); // Скрываем панель квеста
+
+            // Активируем показ уведомлений
+            if (notificationPanelController != null)
+            {
+                notificationPanelController.ShowNotifications(notificationImage);
+            }
         }
     }
 }
