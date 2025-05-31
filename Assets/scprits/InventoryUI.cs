@@ -22,6 +22,7 @@ public class InventoryUI : MonoBehaviour
     private InventoryItem[] items = new InventoryItem[INVENTORY_SIZE];
     private int selectedIndex = -1;
     private int occupiedSlots = 0;
+    private int KeyPartsCount;
 
     void Start()
     {
@@ -46,6 +47,10 @@ public class InventoryUI : MonoBehaviour
             UpdateSlotUI(i);
         }
     }
+
+    public void updateKeyPartsCount() => KeyPartsCount++;
+
+    public bool HasTwoKeyParts() => KeyPartsCount >= 2;
 
     private void ToggleInventory()
     {
@@ -115,7 +120,8 @@ public class InventoryUI : MonoBehaviour
 
     private void UseSelectedItem()
     {
-        if (selectedIndex < 0 || selectedIndex >= occupiedSlots || items[selectedIndex] == null)
+        if (selectedIndex < 0 || selectedIndex >= occupiedSlots 
+        || items[selectedIndex] == null || items[selectedIndex].NotRemoveAfterUse)
             return;
 
         items[selectedIndex].Use();
@@ -137,7 +143,7 @@ public class InventoryUI : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    private void ClearSelection()
+    public void ClearSelection()
     {
         selectedIndex = -1;
         itemIcon.sprite = null;

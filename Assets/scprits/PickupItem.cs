@@ -10,11 +10,12 @@ public class PickupItem : MonoBehaviour
     {
         if (canPickup && Input.GetKeyDown(KeyCode.F))
         {
-            bool added = InventoryUI.Instance.AddItem(itemToPickup);
+            var added = InventoryUI.Instance.AddItem(itemToPickup);
             Debug.Log("Item pickup attempted. Success: " + added);
 
             if (added && NeededDestroy)
                 Destroy(gameObject);
+                
         }
     }
 

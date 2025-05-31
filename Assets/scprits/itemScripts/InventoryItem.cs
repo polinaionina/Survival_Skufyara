@@ -6,7 +6,7 @@ public class InventoryItem : ScriptableObject
     public string itemName;
     public Sprite icon;
     public string description;
-    public bool removeAfterUse;
+    public bool NotRemoveAfterUse;
 
     public virtual void Use()
     {
