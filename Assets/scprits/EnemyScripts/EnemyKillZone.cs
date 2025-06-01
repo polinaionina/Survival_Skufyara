@@ -40,6 +40,11 @@ public class KillZone : MonoBehaviour
         if (deathScreenImage != null)
             deathScreenImage.SetActive(false);
 
+        // ВАЖНО: Ждем конца кадра (или следующего кадра),
+        // чтобы все физические события (как OnTriggerExit2D) успели обработаться,
+        // пока cameraLocked все еще true.
+        yield return null; // Можно также использовать yield return new WaitForEndOfFrame();
+
         // Включаем триггер камеры обратно
         CameraTrigger1.cameraLocked = false;
     }
