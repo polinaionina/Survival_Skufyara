@@ -26,8 +26,8 @@ public class EnemyWander : MonoBehaviour
     private Vector2[] points = new Vector2[]
     {
         new Vector2(69.902f, -12.132f), // влево
-        new Vector2(69.902f, -4.043f),  // вверх
-        new Vector2(71.653f, -4.043f),  // вправо
+        new Vector2(69.902f, -8.043f),  // вверх
+        new Vector2(71.653f, -8.043f),  // вправо
         new Vector2(71.653f, -12.132f), // вниз (исходная точка)
     };
 
@@ -93,8 +93,7 @@ public class EnemyWander : MonoBehaviour
     public void SetAggressive(bool state)
     {
         aggressiveMode = state;
-        // При смене режима обновим спрайт согласно последнему направлению
-        // Для этого возьмем вектор к текущей цели
+
         Vector2 currentPosition = rb.position;
         Vector2 targetPosition = points[currentTargetIndex];
         Vector2 direction = (targetPosition - currentPosition).normalized;

@@ -23,20 +23,29 @@ public class KeyInsertManager : MonoBehaviour
     private const float correctRotation2 = 0f;
 
     void Update()
-    {
+    {   
         if (playerInTrigger && Input.GetKeyDown(KeyCode.F))
-        {
-            ShowCanvas(true);
-
-            if (InventoryUI.Instance.HasTwoKeyParts())
+        {   
+            if (active)
             {
-                instructionText.text = "Вращай осколок на R, попробуй вставить на E";
-                ShowPart(1);
-                currentPart = 1;
+                ShowCanvas(false); 
+                return;
             }
             else
             {
-                instructionText.text = "Кажется тебе чего-то не хватает, осмотри комнату";
+                ShowCanvas(true);
+                if (currentPart == 0){
+                    if (InventoryUI.Instance.HasTwoKeyParts()) 
+                    {
+                        instructionText.text = "Вращай осколок на R, попробуй вставить на E";
+                        ShowPart(1);
+                        currentPart = 1;
+                    }
+                    else
+                    {
+                        instructionText.text = "Кажется тебе чего-то не хватает, осмотри комнату";
+                    }
+                }
             }
         }
 
@@ -73,7 +82,7 @@ public class KeyInsertManager : MonoBehaviour
         {
             if (Mathf.Approximately(part1Rotation % 360f, correctRotation1))
             {
-                statusText.text = "Успешно";
+                statusText.text = "Правильно!";
                 ShowPart(2);
                 currentPart = 2;
             }
