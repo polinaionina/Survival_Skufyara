@@ -6,31 +6,43 @@ public class KillZone : MonoBehaviour
 {
     public Transform playerRespawnPoint;
     public Transform cameraRespawnPoint;
-
     public GameObject deathScreenImage; // UI изображение смерти
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            StartCoroutine(TeleportPlayer(other));
+            // Получаем компонент movee с объекта игрока
+            movee playerMoveeScript = other.GetComponent<movee>();
+
+            if (playerMoveeScript != null)
+            {
+                StartCoroutine(TeleportPlayer(other, playerMoveeScript));
+            }
+            else
+            {
+                Debug.LogError("KillZone: Скрипт 'movee' не найден на объекте игрока!");
+            }
         }
     }
 
-    IEnumerator TeleportPlayer(Collider2D player)
+    IEnumerator TeleportPlayer(Collider2D playerCollider, movee playerMoveeScript)
     {
+        // 1. Блокируем движение игрока используя его собственный скрипт
+        playerMoveeScript.LockMovement(true);
+
         // Показываем изображение смерти
         if (deathScreenImage != null)
             deathScreenImage.SetActive(true);
 
-        // Отключаем триггер камеры
+        // Блокируем триггер камеры
         CameraTrigger1.cameraLocked = true;
 
-        // Ждём 1 секунду перед телепортацией
+        // Ждём 1.2 секунды перед телепортацией
         yield return new WaitForSeconds(1.2f);
 
         // Перемещаем игрока и камеру
-        player.transform.position = playerRespawnPoint.position;
+        playerCollider.transform.position = playerRespawnPoint.position;
         Camera.main.transform.position = new Vector3(
             cameraRespawnPoint.position.x,
             cameraRespawnPoint.position.y,
@@ -40,12 +52,15 @@ public class KillZone : MonoBehaviour
         if (deathScreenImage != null)
             deathScreenImage.SetActive(false);
 
-        // ВАЖНО: Ждем конца кадра (или следующего кадра),
+        // Ждем конца кадра (или следующего кадра),
         // чтобы все физические события (как OnTriggerExit2D) успели обработаться,
         // пока cameraLocked все еще true.
-        yield return null; // Можно также использовать yield return new WaitForEndOfFrame();
+        yield return null; // или yield return new WaitForEndOfFrame();
 
         // Включаем триггер камеры обратно
         CameraTrigger1.cameraLocked = false;
+
+        // 2. Разблокируем движение игрока
+        playerMoveeScript.LockMovement(false);
     }
 }
