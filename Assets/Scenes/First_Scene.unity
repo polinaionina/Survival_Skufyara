@@ -6590,7 +6590,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -37.09996, y: 3.8999634}
+  m_AnchoredPosition: {x: -37.09999, y: 3.8999634}
   m_SizeDelta: {x: -196.03, y: -115.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &275325657
@@ -9774,7 +9774,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 29.42, y: 1.16}
+  m_AnchoredPosition: {x: 29.27, y: 1.14}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5275476, y: 0.49462909}
 --- !u!114 &416429694
@@ -22376,7 +22376,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1135576436
 Transform:
   m_ObjectHideFlags: 0
@@ -22386,8 +22386,8 @@ Transform:
   m_GameObject: {fileID: 1135576435}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 29.427258, y: 1.118, z: 0.12427521}
-  m_LocalScale: {x: 0.25015342, y: 0.27071208, z: 0.14463146}
+  m_LocalPosition: {x: 29.33, y: 1.17, z: 0.12427521}
+  m_LocalScale: {x: 0.23634496, y: 0.2576096, z: 0.14463146}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -22407,7 +22407,7 @@ MonoBehaviour:
   teleportTarget: {fileID: 1677337582}
   pairedTeleporter: {fileID: 1677337586}
   activationType: 1
-  isActive: 0
+  isActive: 1
   teleportDelay: 0
   activeSprite: {fileID: 8857390007749138907, guid: 4540dc3bad02466479c334ada2ce21b9, type: 3}
   changeSprite: 1
@@ -22502,7 +22502,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 4164263795602601292, guid: 422ac2653c4e572479a8b8c84fed169f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -23088,6 +23088,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1164279735
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1164279737}
+  - component: {fileID: 1164279736}
+  m_Layer: 0
+  m_Name: DependencyManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1164279736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164279735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6fff3b88e820cd4db55679e576010cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dependentObjects:
+  - {fileID: 416429692}
+  targetObject: {fileID: 1135576435}
+--- !u!4 &1164279737
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164279735}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 33.375584, y: -0.09117588, z: 0.16992787}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1169949640
 GameObject:
   m_ObjectHideFlags: 0
@@ -31969,7 +32016,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teleportTarget: {fileID: 84567702}
-  pairedTeleporter: {fileID: 0}
+  pairedTeleporter: {fileID: 1135576438}
   activationType: 0
   isActive: 1
   teleportDelay: 0
@@ -42104,3 +42151,4 @@ SceneRoots:
   - {fileID: 416429693}
   - {fileID: 1135576436}
   - {fileID: 759864961}
+  - {fileID: 1164279737}
