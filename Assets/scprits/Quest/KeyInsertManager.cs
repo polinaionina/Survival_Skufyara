@@ -87,8 +87,7 @@ public class KeyInsertManager : MonoBehaviour
             if (Mathf.Approximately(part2Rotation % 360f, correctRotation2))
             {
                 statusText.text = "Успешно";
-                InventoryUI.Instance.ClearSelection();
-                InventoryUI.Instance.ClearSelection();
+                InventoryUI.Instance.ClearInventory();
 
                 if (objectToEnable != null)
                 {

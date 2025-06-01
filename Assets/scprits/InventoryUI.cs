@@ -152,4 +152,21 @@ public class InventoryUI : MonoBehaviour
         itemDescription.text = "";
         useButton.gameObject.SetActive(false);
     }
+
+    public void ClearInventory()
+    {
+        for (var i = 0; i < items.Length; i++)
+        {
+            items[i] = null;
+        }
+    
+        occupiedSlots = 0;
+        KeyPartsCount = 0;
+        ClearSelection();
+        
+        for (var i = 0; i < slotButtons.Count; i++)
+        {
+            UpdateSlotUI(i);
+        }
+    }
 }
