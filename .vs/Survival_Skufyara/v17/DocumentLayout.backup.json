@@ -40,7 +40,7 @@
               "RelativeDocumentMoniker": "Assets\\scprits\\EnemyScripts\\EnemyKillZone.cs",
               "ToolTip": "C:\\Users\\UseR\\Desktop\\skuf\\Survival_Skufyara\\Assets\\scprits\\EnemyScripts\\EnemyKillZone.cs",
               "RelativeToolTip": "Assets\\scprits\\EnemyScripts\\EnemyKillZone.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-27T14:58:22.684Z",
               "EditorCaption": ""
@@ -51,12 +51,11 @@
               "Title": "AggroTrigger.cs",
               "DocumentMoniker": "C:\\Users\\UseR\\Desktop\\skuf\\Survival_Skufyara\\Assets\\scprits\\EnemyScripts\\AggroTrigger.cs",
               "RelativeDocumentMoniker": "Assets\\scprits\\EnemyScripts\\AggroTrigger.cs",
-              "ToolTip": "C:\\Users\\UseR\\Desktop\\skuf\\Survival_Skufyara\\Assets\\scprits\\EnemyScripts\\AggroTrigger.cs*",
-              "RelativeToolTip": "Assets\\scprits\\EnemyScripts\\AggroTrigger.cs*",
+              "ToolTip": "C:\\Users\\UseR\\Desktop\\skuf\\Survival_Skufyara\\Assets\\scprits\\EnemyScripts\\AggroTrigger.cs",
+              "RelativeToolTip": "Assets\\scprits\\EnemyScripts\\AggroTrigger.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T14:19:17.773Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-27T14:19:17.773Z"
             },
             {
               "$type": "Document",
@@ -68,8 +67,7 @@
               "RelativeToolTip": "Assets\\scprits\\EnemyScripts\\EnemyWander.cs",
               "ViewState": "AgIAADEAAAAAAAAAAAAwwEIAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T13:19:21.631Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-27T13:19:21.631Z"
             },
             {
               "$type": "Document",

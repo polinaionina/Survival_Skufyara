@@ -1,10 +1,9 @@
 using UnityEngine;
 
 public class EnemyWander : MonoBehaviour
-{   
+{
     public static EnemyWander Instanсe;
     public float speed = 2f;
-    public float directionChangeInterval = 2f;
 
     public Sprite spriteForward;
     public Sprite spriteBack;
@@ -18,47 +17,60 @@ public class EnemyWander : MonoBehaviour
 
     private Rigidbody2D rb;
     private Vector2 moveDirection;
-    private float timer = 2f;
     private SpriteRenderer spriteRenderer;
 
     private bool isActive = false;
     private bool aggressiveMode = false;
 
+    // Твои 4 угла маршрута
+    private Vector2[] points = new Vector2[]
+    {
+        new Vector2(69.902f, -12.132f), // влево
+        new Vector2(69.902f, -4.043f),  // вверх
+        new Vector2(71.653f, -4.043f),  // вправо
+        new Vector2(71.653f, -12.132f), // вниз (исходная точка)
+    };
+
+    private int currentTargetIndex = 0;
+
+    private float reachThreshold = 0.05f; // насколько близко подойти к точке, чтобы считать ее достигнутой
+
     void Start()
-    {   
+    {
         Instanсe = this;
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        // Начинаем движение к первой точке
+        currentTargetIndex = 0;
     }
 
     void Update()
-    {   
-        if (isActive)
-        {   
-            timer += Time.deltaTime;
-            if (timer >= directionChangeInterval)
-            {
-                ChooseNewDirection();
-                timer = 0f;
-            }
+    {
+        if (!isActive) return;
+
+        Vector2 currentPosition = rb.position;
+        Vector2 targetPosition = points[currentTargetIndex];
+
+        Vector2 direction = (targetPosition - currentPosition).normalized;
+
+        // Двигаемся к цели
+        rb.linearVelocity = direction * speed;
+
+        // Меняем спрайт в зависимости от направления движения
+        UpdateSprite(direction);
+
+        // Проверяем, достигли ли цель
+        if (Vector2.Distance(currentPosition, targetPosition) < reachThreshold)
+        {
+            // Следующая точка (по циклу)
+            currentTargetIndex = (currentTargetIndex + 1) % points.Length;
         }
     }
-    
+
     public void SetActive() => isActive = true;
 
-    void FixedUpdate()
-    {
-        rb.linearVelocity = moveDirection * speed;
-    }
-
-    void ChooseNewDirection()
-    {
-        var angle = Random.Range(0f, 360f) * Mathf.Deg2Rad;
-        moveDirection = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)).normalized;
-        UpdateSprite();
-    }
-
-    void UpdateSprite()
+    void UpdateSprite(Vector2 moveDirection)
     {
         Sprite newSprite = null;
 
@@ -70,28 +82,22 @@ public class EnemyWander : MonoBehaviour
         }
         else
         {
-            if (moveDirection.y > 0)
-                newSprite = aggressiveMode ? spriteBackAxe : spriteBack;
-            else
-                newSprite = aggressiveMode ? spriteForwardAxe : spriteForward;
+            newSprite = moveDirection.y > 0
+                ? (aggressiveMode ? spriteBackAxe : spriteBack)
+                : (aggressiveMode ? spriteForwardAxe : spriteForward);
         }
 
         spriteRenderer.sprite = newSprite;
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.collider.CompareTag("Wall"))
-        {
-            Vector2 normal = collision.contacts[0].normal;
-            moveDirection = Vector2.Reflect(moveDirection, normal);
-            UpdateSprite();
-        }
-    }
-
     public void SetAggressive(bool state)
     {
         aggressiveMode = state;
-        UpdateSprite();
+        // При смене режима обновим спрайт согласно последнему направлению
+        // Для этого возьмем вектор к текущей цели
+        Vector2 currentPosition = rb.position;
+        Vector2 targetPosition = points[currentTargetIndex];
+        Vector2 direction = (targetPosition - currentPosition).normalized;
+        UpdateSprite(direction);
     }
 }

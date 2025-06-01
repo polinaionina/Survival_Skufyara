@@ -1,10 +1,13 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI; // Для UI
 
 public class KillZone : MonoBehaviour
 {
     public Transform playerRespawnPoint;
     public Transform cameraRespawnPoint;
+
+    public GameObject deathScreenImage; // UI изображение смерти
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -16,8 +19,15 @@ public class KillZone : MonoBehaviour
 
     IEnumerator TeleportPlayer(Collider2D player)
     {
+        // Показываем изображение смерти
+        if (deathScreenImage != null)
+            deathScreenImage.SetActive(true);
+
         // Отключаем триггер камеры
         CameraTrigger1.cameraLocked = true;
+
+        // Ждём 1 секунду перед телепортацией
+        yield return new WaitForSeconds(1.2f);
 
         // Перемещаем игрока и камеру
         player.transform.position = playerRespawnPoint.position;
@@ -26,8 +36,9 @@ public class KillZone : MonoBehaviour
             cameraRespawnPoint.position.y,
             Camera.main.transform.position.z);
 
-        // Немного ждём (чтобы все OnTriggerExit отработали)
-        yield return new WaitForSeconds(0.2f);
+        // Скрываем изображение смерти
+        if (deathScreenImage != null)
+            deathScreenImage.SetActive(false);
 
         // Включаем триггер камеры обратно
         CameraTrigger1.cameraLocked = false;
