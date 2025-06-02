@@ -236,7 +236,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -93.77998, y: 84.17}
+  m_AnchoredPosition: {x: -93.77995, y: 84.17}
   m_SizeDelta: {x: -272.25998, y: -236.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &20313112
@@ -6764,7 +6764,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -37.09999, y: 3.8999634}
+  m_AnchoredPosition: {x: -37.099976, y: 3.8999634}
   m_SizeDelta: {x: -196.03, y: -115.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &275325657
@@ -7734,7 +7734,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7140684480639504052, guid: a336bc475cbe351409bc3a475961b9d3, type: 3}
+  m_Sprite: {fileID: 2885807569419479158, guid: 5447c10113ab46247a099797d8f11b5a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -15657,7 +15657,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 12
+  m_SortingOrder: 7
   m_Sprite: {fileID: -2818020570705238843, guid: 76869e8bde003ca4489f8e1720068aea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -20084,7 +20084,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -36, y: 18.51001}
+  m_AnchoredPosition: {x: -36, y: 18.541992}
   m_SizeDelta: {x: -343.47, y: -85.98}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &986112665
@@ -32275,7 +32275,7 @@ MonoBehaviour:
   inputField: {fileID: 404292472}
   feedbackText: {fileID: 1696484233}
   confirmButton: {fileID: 1603073959}
-  correctAnswer: 0,95
+  correctAnswer: "\u043B\u044E\u0431\u043E\u0432\u044C"
   objectsToDisable:
   - {fileID: 314565471}
   - {fileID: 1603073955}

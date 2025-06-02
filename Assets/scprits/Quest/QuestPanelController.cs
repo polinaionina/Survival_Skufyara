@@ -55,8 +55,11 @@ public class QuestPanelController : MonoBehaviour
 
     private void CheckAnswer()
     {
-        string userInput = inputField.text.Trim().ToLower();
-        bool isCorrect = userInput == correctAnswer.ToLower();
+        // Нормализуем ввод: удаляем запятые, лишние пробелы и приводим к нижнему регистру
+        string userInput = NormalizeInput(inputField.text);
+        string normalizedCorrectAnswer = NormalizeInput(correctAnswer);
+        
+        bool isCorrect = userInput == normalizedCorrectAnswer;
 
         feedbackText.text = isCorrect ? "Правильно!" : "Неправильно!";
         feedbackText.gameObject.SetActive(true);
@@ -83,5 +86,12 @@ public class QuestPanelController : MonoBehaviour
                 notificationPanelController.ShowNotifications(notificationImage);
             }
         }
+    }
+
+    // Метод для нормализации ввода (удаление запятых, лишних пробелов и приведение к нижнему регистру)
+    private string NormalizeInput(string input)
+    {
+        // Удаляем запятые и лишние пробелы, приводим к нижнему регистру
+        return input.Replace(",", "").Trim().ToLower();
     }
 }
