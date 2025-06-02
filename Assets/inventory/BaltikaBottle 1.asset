@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BaltikaBottle 1
   m_EditorClassIdentifier: 
   itemName: "\u0411\u0430\u043B\u0442\u0438\u043A\u0430"
-  icon: {fileID: 7755568698057661142, guid: c4da9f9bc7d2b924fa243bb0bc6e44ab, type: 3}
+  icon: {fileID: 4346598711703489306, guid: 330e1d30a32504c08a2baba80c4aefa1, type: 3}
   description: "\u0425\u043E\u043B\u043E\u0434\u043D\u0430\u044F \u0431\u0443\u0442\u044B\u043B\u043E\u0447\u043A\u0430
     \u043F\u0438\u0432\u0430\u0441\u0430"
   NotRemoveAfterUse: 0
