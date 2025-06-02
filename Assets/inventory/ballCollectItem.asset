@@ -16,4 +16,8 @@ MonoBehaviour:
   icon: {fileID: 9045208880589451659, guid: 6ad723fc64d47d649bf4172347d4c30d, type: 3}
   description: "\u041B\u0435\u0442\u043E\u043C \u0441 \u043F\u0430\u0446\u0430\u043D\u0430\u043C\u0438
     \u0433\u043E\u043D\u044F\u043B\u0438 \u0448\u0430\u0440\u044B"
-  removeAfterUse: 0
+  NotRemoveAfterUse: 0
+  useEffectFrames:
+  - {fileID: 21300000, guid: c824202f27620ab459b20bd0cc20aa82, type: 3}
+  - {fileID: 21300000, guid: f7c3666ae23a6ee47903e26660100609, type: 3}
+  - {fileID: 21300000, guid: 0afc175af1e14084295c2f802b48d956, type: 3}

@@ -19,3 +19,11 @@ MonoBehaviour:
   NotRemoveAfterUse: 0
   targetObjectName: "\u0434\u0438\u0432\u0430\u043D-no-bg-preview (carve.photos)
     1_0"
+  useEffectFrames:
+  - {fileID: 4822750985941675183, guid: 38ccd3716fa39b349a34a0383c150e70, type: 3}
+  - {fileID: 4608601786557497093, guid: c750e710047b0124baf12c3feb7bdc6f, type: 3}
+  - {fileID: -4222373201668130288, guid: 0f76ebd45096d6e42ad649339cd9678c, type: 3}
+  - {fileID: 7028318685927707097, guid: 001623c532711a9448c9e8a797f5a95c, type: 3}
+  - {fileID: -1902169410191725780, guid: 1a2c792fe9c195646b946cc9c22accfa, type: 3}
+  - {fileID: 6237450934213542068, guid: 52ad4b8a830f07d45902b189428c7593, type: 3}
+  - {fileID: -7275136806015589352, guid: 86e989af73f6e78478859d292c1f6767, type: 3}

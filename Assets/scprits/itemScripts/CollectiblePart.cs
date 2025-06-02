@@ -4,18 +4,20 @@ public class CollectiblePart : InventoryItem
 {
     private static int usedPartsCount = 0;
     private const int requiredCount = 4;
+    public Sprite[] useEffectFrames;
 
     public override void Use()
     {
         usedPartsCount++;
-         Debug.Log("+1");
+        Debug.Log("+1");
         if (usedPartsCount >= requiredCount) OnAllPartsUsed();
+        ItemUseEffectPlayer.Instance.PlayEffect(useEffectFrames, 1f);
     }
 
     private void OnAllPartsUsed()
     {   
         Debug.Log("Все предметы собраны");
-        GameObject obj = GameObject.Find("enddoor_0");
+        var obj = GameObject.Find("enddoor_0");
         var teleportScript = obj.GetComponent<teleportFINAL>();
         if (teleportScript != null) teleportScript.ActivateTeleport();
         QuestManager.Instance?.TriggerNextQuest();

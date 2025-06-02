@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 8aa466f50f72840cfb94a2c686f7be24
+guid: 52ad4b8a830f07d45902b189428c7593
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4250489104835112452
-    second: "\u043F\u043E\u0447\u0438\u043A\u0430\u043D\u043D\u044B\u0438\u0306 \u0442\u0435\u043B\u0435\u043A-Photoroom_0"
-  - first:
-      213: -346130523841874757
-    second: "\u043F\u043E\u0447\u0438\u043A\u0430\u043D\u043D\u044B\u0438\u0306 \u0442\u0435\u043B\u0435\u043A-Photoroom_1"
+      213: 6237450934213542068
+    second: pivoEffect6_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u043F\u043E\u0447\u0438\u043A\u0430\u043D\u043D\u044B\u0438\u0306 \u0442\u0435\u043B\u0435\u043A-Photoroom_0"
+      name: pivoEffect6_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 5
-        width: 649
-        height: 549
+        y: 0
+        width: 720
+        height: 1280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cf192a0edaa3305c0800000000000000
-      internalID: -4250489104835112452
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u043F\u043E\u0447\u0438\u043A\u0430\u043D\u043D\u044B\u0438\u0306 \u0442\u0435\u043B\u0435\u043A-Photoroom_1"
-      rect:
-        serializedVersion: 2
-        x: 671
-        y: 5
-        width: 208
-        height: 358
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bb43c785f1c423bf0800000000000000
-      internalID: -346130523841874757
+      spriteID: 4b00ab5c390ef8650800000000000000
+      internalID: 6237450934213542068
       vertices: []
       indices: 
       edges: []
@@ -159,9 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      "\u043F\u043E\u0447\u0438\u043A\u0430\u043D\u043D\u044B\u0438\u0306 \u0442\u0435\u043B\u0435\u043A-Photoroom_0": -4250489104835112452
-      "\u043F\u043E\u0447\u0438\u043A\u0430\u043D\u043D\u044B\u0438\u0306 \u0442\u0435\u043B\u0435\u043A-Photoroom_1": -346130523841874757
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

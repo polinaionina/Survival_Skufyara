@@ -3,11 +3,11 @@ using UnityEngine;
 public class QuestAdvanceItem : InventoryItem
 {
     public string targetObjectName; 
+    public Sprite[] useEffectFrames;
 
     public override void Use()
     {
         base.Use();
-
         GameObject obj = GameObject.Find(targetObjectName);
         if (obj != null)
         {
@@ -16,7 +16,7 @@ public class QuestAdvanceItem : InventoryItem
             var faderScript = obj.GetComponent<FadeTrigger>();
             if (faderScript != null) faderScript.SetActive(); 
         }
-
+        ItemUseEffectPlayer.Instance.PlayEffect(useEffectFrames, 0.3f);
         QuestManager.Instance?.TriggerNextQuest();
     }
 }
