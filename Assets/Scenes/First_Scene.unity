@@ -236,7 +236,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -93.77997, y: 84.17}
+  m_AnchoredPosition: {x: -93.77998, y: 84.17}
   m_SizeDelta: {x: -272.25998, y: -236.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &20313112
@@ -8533,7 +8533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1c486951017e48738b28a0363c888f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaryMusic: {fileID: 8300000, guid: 122f93518a301465aa79683e77493dce, type: 3}
+  scaryMusic: {fileID: 8300000, guid: baae64e053a3a449fa766306591061a4, type: 3}
   normalMusic: {fileID: 8300000, guid: 85a9712f8610b4caa9c6d5216065f6b5, type: 3}
 --- !u!61 &349458482
 BoxCollider2D:
