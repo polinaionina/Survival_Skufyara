@@ -5,18 +5,15 @@ public class TeleportPairF : MonoBehaviour
 {
     public enum ActivationType { Automatic, Manual }
 
-    [Header("Основные настройки")]
     public Transform teleportTarget;
     public TeleportPairF pairedTeleporter;
     public ActivationType activationType = ActivationType.Automatic;
     public bool isActive = true;
     public float teleportDelay = 0f;
 
-    [Header("Визуальные настройки")]
     public Sprite activeSprite;
     public bool changeSprite = true;
 
-    [Header("Настройки камеры")]
     public float CameraPosX, CameraPosY;
 
     private Sprite originalSprite;
@@ -39,7 +36,6 @@ public class TeleportPairF : MonoBehaviour
         if (!isActive || !playerIsInside || isTeleporting)
             return;
 
-        // Разная логика активации в зависимости от типа
         bool shouldTeleport = activationType == ActivationType.Automatic || 
                             (activationType == ActivationType.Manual && Input.GetKeyDown(KeyCode.F));
 

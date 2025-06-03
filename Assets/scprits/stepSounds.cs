@@ -21,7 +21,6 @@ public class FootstepSound : MonoBehaviour
 
     void Update()
     {
-        // Если двигаемся
         if (rb.linearVelocity.magnitude > 0.1f && footstepClip != null)
         {
             stepTimer += Time.deltaTime;

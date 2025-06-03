@@ -4,13 +4,9 @@ using System.Collections;
 
 public class NotificationController : MonoBehaviour
 {
-    [Tooltip("Массив спрайтов (картинок) для последовательного отображения")]
     public Sprite[] notificationSprites;
-    [Tooltip("Время плавного появления уведомления (в секундах)")]
     public float fadeInDuration = 0.5f;
-    [Tooltip("Время, которое уведомление будет видно на экране (в секундах)")]
     public float displayDuration = 2.0f;
-    [Tooltip("Время плавного затухания уведомления (в секундах)")]
     public float fadeOutDuration = 0.5f;
 
     private Image notificationImage;
@@ -31,7 +27,7 @@ public class NotificationController : MonoBehaviour
         {
             canvasGroup = gameObject.AddComponent<CanvasGroup>();
         }
-        canvasGroup.alpha = 0f; // Изначально полностью прозрачный
+        canvasGroup.alpha = 0f;
     }
 
     public void ShowNotifications()
@@ -42,7 +38,7 @@ public class NotificationController : MonoBehaviour
             return;
         }
 
-        gameObject.SetActive(true); // Активируем NotificationImage
+        gameObject.SetActive(true);
         StartCoroutine(ShowNotificationSequence());
     }
 
@@ -52,23 +48,20 @@ public class NotificationController : MonoBehaviour
         {
             notificationImage.sprite = spriteToShow;
 
-            // Fade In
             yield return StartCoroutine(FadeCanvasGroup(0f, 1f, fadeInDuration));
 
-            // Display
             yield return new WaitForSecondsRealtime(displayDuration);
 
-            // Fade Out
             yield return StartCoroutine(FadeCanvasGroup(1f, 0f, fadeOutDuration));
         }
 
-        gameObject.SetActive(false); // Деактивируем NotificationImage после завершения
+        gameObject.SetActive(false);
     }
 
     private IEnumerator FadeCanvasGroup(float startAlpha, float endAlpha, float duration)
     {
         float time = 0;
-        canvasGroup.alpha = startAlpha; // Ensure starting alpha is correct
+        canvasGroup.alpha = startAlpha;
 
         while (time < duration)
         {
@@ -77,6 +70,6 @@ public class NotificationController : MonoBehaviour
             yield return null;
         }
 
-        canvasGroup.alpha = endAlpha; // Ensure ending alpha is exact
+        canvasGroup.alpha = endAlpha;
     }
 }

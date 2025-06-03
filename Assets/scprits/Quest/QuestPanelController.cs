@@ -4,24 +4,18 @@ using UnityEngine.UI;
 
 public class QuestPanelController : MonoBehaviour
 {
-    [Header("Настройки квеста")]
     public TMP_InputField inputField;
     public TMP_Text feedbackText;
     public Button confirmButton;
     public string correctAnswer = "unity";
 
-    [Header("Объекты для управления")]
-    [Tooltip("Объекты, которые нужно выключить при правильном ответе")]
     public GameObject[] objectsToDisable;
 
-    [Tooltip("Необязательно: объект, который нужно включить при правильном ответе")]
     public GameObject objectToEnable;
 
     public movee playerMovement;
 
-    [Header("Настройки уведомлений")]
-    public NotificationPanelController notificationPanelController; // Ссылка на NotificationPanelController
-    [Tooltip("Изображение уведомления")]
+    public NotificationPanelController notificationPanelController;
     public Sprite notificationImage;
 
     private void Start()
@@ -30,7 +24,6 @@ public class QuestPanelController : MonoBehaviour
         feedbackText.gameObject.SetActive(false);
         confirmButton.onClick.AddListener(CheckAnswer);
 
-        // Выключаем объект при старте, если он задан
         if (objectToEnable != null)
         {
             objectToEnable.SetActive(false);
@@ -55,7 +48,6 @@ public class QuestPanelController : MonoBehaviour
 
     private void CheckAnswer()
     {
-        // Нормализуем ввод: удаляем запятые, лишние пробелы и приводим к нижнему регистру
         string userInput = NormalizeInput(inputField.text);
         string normalizedCorrectAnswer = NormalizeInput(correctAnswer);
         
@@ -66,21 +58,18 @@ public class QuestPanelController : MonoBehaviour
 
         if (isCorrect)
         {
-            // Выключаем указанные объекты
             foreach (GameObject obj in objectsToDisable)
             {
                 if (obj != null) obj.SetActive(false);
             }
 
-            // Включаем нужный объект, если он указан
             if (objectToEnable != null)
             {
                 objectToEnable.SetActive(true);
             }
 
-            HideQuest(); // Скрываем панель квеста
+            HideQuest();
 
-            // Активируем показ уведомлений
             if (notificationPanelController != null)
             {
                 notificationPanelController.ShowNotifications(notificationImage);
@@ -88,10 +77,8 @@ public class QuestPanelController : MonoBehaviour
         }
     }
 
-    // Метод для нормализации ввода (удаление запятых, лишних пробелов и приведение к нижнему регистру)
     private string NormalizeInput(string input)
     {
-        // Удаляем запятые и лишние пробелы, приводим к нижнему регистру
         return input.Replace(",", "").Trim().ToLower();
     }
 }

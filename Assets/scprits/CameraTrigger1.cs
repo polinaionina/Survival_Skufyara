@@ -7,7 +7,7 @@ public class CameraTrigger1 : MonoBehaviour
 
     private Camera mainCamera;
 
-    public static bool cameraLocked = false; // Глобальный флаг
+    public static bool cameraLocked = false;
 
     void Start()
     {

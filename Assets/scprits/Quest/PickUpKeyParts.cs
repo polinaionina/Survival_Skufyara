@@ -2,23 +2,17 @@ using UnityEngine;
 
 public class PickUpKeyParts : MonoBehaviour
 {
-    [Header("Настройки предмета")]
     public InventoryItem itemToPickup;
-    public Sprite newSprite; // Спрайт, который показывается, когда можно подобрать
+    public Sprite newSprite;
 
-    [Header("Настройки уведомлений (необязательно)")]
-    [Tooltip("Включить показ уведомления при подборе предмета?")]
     public bool showNotificationOnPickup = false;
-    [Tooltip("Ссылка на контроллер панели уведомлений")]
     public NotificationPanelController notificationPanelController;
-    [Tooltip("Изображение для уведомления")]
     public Sprite notificationImage;
 
     private bool canPickup = false;
-    // private bool HasTwoParts = false; // Эта переменная не использовалась, возможно, она нужна для другой логики
     private Sprite originalSprite;
     private SpriteRenderer spriteRenderer;
-    private bool hasPickedUp = false; // Флаг, что предмет уже был поднят
+    private bool hasPickedUp = false;
 
     void Start()
     {
@@ -30,7 +24,7 @@ public class PickUpKeyParts : MonoBehaviour
         else
         {
             Debug.LogError("PickUpKeyParts: На объекте отсутствует SpriteRenderer!", this);
-            enabled = false; // Отключаем скрипт, если нет SpriteRenderer
+            enabled = false;
         }
     }
 
@@ -46,14 +40,12 @@ public class PickUpKeyParts : MonoBehaviour
                 if (added)
                 {
                     InventoryUI.Instance.updateKeyPartsCount();
-                    hasPickedUp = true; // Устанавливаем флаг, что предмет поднят
+                    hasPickedUp = true;
                     if (spriteRenderer != null)
                     {
-                        spriteRenderer.sprite = originalSprite; // Возвращаем оригинальный спрайт или можно скрыть объект
+                        spriteRenderer.sprite = originalSprite;
                     }
-                    // gameObject.SetActive(false); // Можно деактивировать объект после подбора, если он не уничтожается
 
-                    // Показываем уведомление, если включено и настроено
                     if (showNotificationOnPickup)
                     {
                         if (notificationPanelController != null)
@@ -65,9 +57,6 @@ public class PickUpKeyParts : MonoBehaviour
                             Debug.LogWarning("PickUpKeyParts: NotificationPanelController не назначен, уведомление не будет показано.", this);
                         }
                     }
-                    // Если предмет не должен уничтожаться, но и не должен быть подбираем повторно,
-                    // то hasPickedUp флаг предотвратит это.
-                    // Если объект должен уничтожаться, то можно добавить Destroy(gameObject);
                 }
             }
             else
@@ -79,7 +68,7 @@ public class PickUpKeyParts : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && !hasPickedUp) // Проверяем, что предмет еще не поднят
+        if (other.CompareTag("Player") && !hasPickedUp)
         {
             canPickup = true;
             if (spriteRenderer != null && newSprite != null)
@@ -94,7 +83,7 @@ public class PickUpKeyParts : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             canPickup = false;
-            if (spriteRenderer != null && !hasPickedUp) // Возвращаем оригинальный спрайт, только если предмет не поднят
+            if (spriteRenderer != null && !hasPickedUp)
             {
                 spriteRenderer.sprite = originalSprite;
             }

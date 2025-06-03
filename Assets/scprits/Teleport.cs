@@ -2,14 +2,12 @@ using UnityEngine;
 
 public class Teleport : MonoBehaviour
 {
-    [Header("Основные настройки")]
-    public Transform teleportTarget;  // Точка телепортации
-    public float CameraPosX, CameraPosY;  // Координаты камеры после телепорта
-    public KeyCode teleportKey = KeyCode.F;  // Клавиша активации
+    public Transform teleportTarget;
+    public float CameraPosX, CameraPosY;
+    public KeyCode teleportKey = KeyCode.F;
 
-    [Header("Визуальные настройки")]
-    public Sprite newSprite;  // Спрайт при приближении
-    public bool changeSprite = true;  // Нужно ли менять спрайт
+    public Sprite newSprite;
+    public bool changeSprite = true;
     
     private Sprite originalSprite;
     private SpriteRenderer spriteRenderer;
@@ -40,7 +38,6 @@ public class Teleport : MonoBehaviour
             playerInRange = true;
             player = other.gameObject;
             
-            // Меняем спрайт при приближении
             if (changeSprite && newSprite != null && spriteRenderer != null)
             {
                 spriteRenderer.sprite = newSprite;
@@ -55,7 +52,6 @@ public class Teleport : MonoBehaviour
             playerInRange = false;
             player = null;
             
-            // Возвращаем исходный спрайт
             if (changeSprite && spriteRenderer != null)
             {
                 spriteRenderer.sprite = originalSprite;
@@ -67,10 +63,8 @@ public class Teleport : MonoBehaviour
     {
         if (player != null && teleportTarget != null)
         {
-            // Телепортируем игрока
             player.transform.position = teleportTarget.position;
             
-            // Перемещаем камеру
             if (Camera.main != null)
             {
                 Camera.main.transform.position = new Vector3(

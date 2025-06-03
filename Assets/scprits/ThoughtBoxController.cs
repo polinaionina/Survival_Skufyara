@@ -13,7 +13,7 @@ public class ThoughtBoxController : MonoBehaviour
 
     private void Start()
     {
-        canvasGroup.alpha = 0f; // Скрываем при старте
+        canvasGroup.alpha = 0f;
     }
 
     public void ShowThought(string thought)

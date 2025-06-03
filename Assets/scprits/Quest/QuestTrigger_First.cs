@@ -3,7 +3,7 @@ using UnityEngine;
 public class QuestTrigger_First : MonoBehaviour
 {
     public QuestPanelController questUI;
-    public Sprite newSprite; // Новый спрайт при приближении
+    public Sprite newSprite;
     private Sprite originalSprite;
     private SpriteRenderer spriteRenderer;
     private bool playerInRange = false;
@@ -11,7 +11,7 @@ public class QuestTrigger_First : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        originalSprite = spriteRenderer.sprite; // Сохраняем исходный спрайт
+        originalSprite = spriteRenderer.sprite;
     }
 
     void Update()
@@ -37,7 +37,6 @@ public class QuestTrigger_First : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = true;
-            // Меняем спрайт при приближении
             if (newSprite != null)
             {
                 spriteRenderer.sprite = newSprite;
@@ -50,7 +49,6 @@ public class QuestTrigger_First : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = false;
-            // Возвращаем исходный спрайт
             spriteRenderer.sprite = originalSprite;
         }
     }

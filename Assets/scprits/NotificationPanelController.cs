@@ -5,19 +5,12 @@ using System.Collections;
 
 public class NotificationPanelController : MonoBehaviour
 {
-    [Tooltip("UI Image для отображения изображения")]
     public Image notificationImage;
-    [Tooltip("TextMeshPro Text для отображения текста")]
     public TMP_Text notificationText;
-    [Tooltip("Массив текстов уведомлений")]
     public string[] notificationTexts;
-    [Tooltip("Цвет текста")]
-    public Color textColor = Color.white; // Цвет текста по умолчанию - белый
-    [Tooltip("Время плавного появления уведомления (в секундах)")]
+    public Color textColor = Color.white;
     public float fadeInDuration = 0.5f;
-    [Tooltip("Время, которое уведомление будет видно на экране (в секундах)")]
     public float displayDuration = 2.0f;
-    [Tooltip("Время плавного затухания уведомления (в секундах)")]
     public float fadeOutDuration = 0.5f;
 
     private CanvasGroup canvasGroup;
@@ -29,7 +22,7 @@ public class NotificationPanelController : MonoBehaviour
         {
             canvasGroup = gameObject.AddComponent<CanvasGroup>();
         }
-        canvasGroup.alpha = 0f; // Изначально полностью прозрачный
+        canvasGroup.alpha = 0f;
     }
 
     public void ShowNotifications(Sprite image)
@@ -37,7 +30,7 @@ public class NotificationPanelController : MonoBehaviour
         if (notificationTexts == null || notificationTexts.Length == 0)
         {
             Debug.LogWarning("No notification texts assigned.");
-            gameObject.SetActive(false); // Ensure panel is deactivated if no texts
+            gameObject.SetActive(false);
             return;
         }
         StartCoroutine(ShowNotificationSequence(image));
@@ -51,23 +44,20 @@ public class NotificationPanelController : MonoBehaviour
             notificationText.color = textColor;
             notificationImage.sprite = image;
 
-            gameObject.SetActive(true); // Активируем NotificationPanel
-            // Fade In
+            gameObject.SetActive(true);
             yield return StartCoroutine(FadeCanvasGroup(0f, 1f, fadeInDuration));
 
-            // Display
             yield return new WaitForSecondsRealtime(displayDuration);
 
-            // Fade Out
             yield return StartCoroutine(FadeCanvasGroup(1f, 0f, fadeOutDuration));
         }
-        gameObject.SetActive(false); // Ensure panel is deactivated after all texts
+        gameObject.SetActive(false);
     }
 
     private IEnumerator FadeCanvasGroup(float startAlpha, float endAlpha, float duration)
     {
         float time = 0;
-        canvasGroup.alpha = startAlpha; // Ensure starting alpha is correct
+        canvasGroup.alpha = startAlpha;
 
         while (time < duration)
         {
@@ -76,6 +66,6 @@ public class NotificationPanelController : MonoBehaviour
             yield return null;
         }
 
-        canvasGroup.alpha = endAlpha; // Ensure ending alpha is exact
+        canvasGroup.alpha = endAlpha;
     }
-}    
+}

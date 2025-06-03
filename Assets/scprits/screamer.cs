@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class MonsterAudioTrigger : MonoBehaviour
 {
-    public AudioSource screamer; // аудиосорс для скримера
-    public Transform Player;      // трансформ игрока
-    public float activationDistance = 5f; // радиус активации звука
+    public AudioSource screamer;
+    public Transform Player;
+    public float activationDistance = 5f;
 
     void Update()
     {
@@ -13,12 +13,12 @@ public class MonsterAudioTrigger : MonoBehaviour
         if (distance <= activationDistance)
         {
             if (!screamer.isPlaying)
-                screamer.Play(); // Включаем звук, если он не играет
+                screamer.Play();
         }
         else
         {
             if (screamer.isPlaying)
-                screamer.Stop(); // Останавливаем звук, если игрок далеко
+                screamer.Stop();
         }
     }
 }

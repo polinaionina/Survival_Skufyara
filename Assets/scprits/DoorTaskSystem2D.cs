@@ -4,46 +4,43 @@ using TMPro;
 
 public class DoorTaskSystem2D : MonoBehaviour
 {
-    public GameObject taskPanel; // Панель с задачей (UI Canvas)
-    public Image taskImage;     // Картинка с заданием (PNG)
-    public TMP_InputField answerInput; // Поле для ввода ответа
-    public string correctAnswer = "123"; // Правильный ответ (задай свой)
-    public KeyCode interactionKey = KeyCode.F; // Клавиша активации (F)
+    public GameObject taskPanel;
+    public Image taskImage;
+    public TMP_InputField answerInput;
+    public string correctAnswer = "123";
+    public KeyCode interactionKey = KeyCode.F;
 
     private bool isPlayerNear = false;
 
     void Start()
     {
-        taskPanel.SetActive(false); // Скрываем панель при старте
+        taskPanel.SetActive(false);
     }
 
     void Update()
     {
-        if (isPlayerNear && Input.GetKeyDown(interactionKey)) // Проверяем нажатие F
+        if (isPlayerNear && Input.GetKeyDown(interactionKey))
         {
             taskPanel.SetActive(true);
-            answerInput.text = ""; // Очищаем поле ввода
-            Time.timeScale = 0f; // Останавливаем игру (опционально)
+            answerInput.text = "";
+            Time.timeScale = 0f;
         }
     }
 
-    // Проверка ответа (вызывается при нажатии кнопки "Проверить" в UI)
     public void CheckAnswer()
     {
         if (answerInput.text == correctAnswer)
         {
             taskPanel.SetActive(false);
-            Destroy(gameObject); // Удаляем дверь (или можно сделать анимацию)
-            Time.timeScale = 1f; // Возобновляем игру
+            Destroy(gameObject);
+            Time.timeScale = 1f;
         }
         else
         {
             Debug.Log("Неверно! Попробуй ещё раз.");
-            // Можно добавить звук ошибки или визуальный эффект
         }
     }
 
-    // 2D-триггеры (используем Collider2D)
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -58,7 +55,7 @@ public class DoorTaskSystem2D : MonoBehaviour
         {
             isPlayerNear = false;
             taskPanel.SetActive(false);
-            Time.timeScale = 1f; // Возобновляем игру, если игрок ушёл
+            Time.timeScale = 1f;
         }
     }
 }

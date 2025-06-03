@@ -2,28 +2,24 @@ using UnityEngine;
 
 public class SimpleImagePanelController : MonoBehaviour
 {
-    [Header("Настройки")]
-    public GameObject objectToShow;  // Объект с картинкой (должен иметь SpriteRenderer)
-    public Sprite newTriggerSprite;   // Спрайт, который появится при приближении к триггеру
-    public KeyCode interactionKey = KeyCode.F; // Клавиша активации
+    public GameObject objectToShow;
+    public Sprite newTriggerSprite;
+    public KeyCode interactionKey = KeyCode.F;
 
-    [Header("Пауза игры")]
-    public bool pauseGame = true;     // Останавливать ли время при показе картинки
+    public bool pauseGame = true;
 
-    private SpriteRenderer triggerSpriteRenderer; // SpriteRenderer текущего объекта (триггера)
-    private Sprite originalTriggerSprite;         // Исходный спрайт триггера
+    private SpriteRenderer triggerSpriteRenderer;
+    private Sprite originalTriggerSprite;
     private bool playerInRange = false;
 
     private void Start()
     {
-        // Находим SpriteRenderer у текущего объекта (если есть)
         triggerSpriteRenderer = GetComponent<SpriteRenderer>();
         if (triggerSpriteRenderer != null)
         {
             originalTriggerSprite = triggerSpriteRenderer.sprite;
         }
 
-        // Выключаем объект с картинкой при старте
         if (objectToShow != null)
         {
             objectToShow.SetActive(false);
@@ -38,7 +34,6 @@ public class SimpleImagePanelController : MonoBehaviour
         }
     }
 
-    // Включить/выключить объект с картинкой
     private void ToggleObject()
     {
         if (objectToShow == null) return;
@@ -46,7 +41,6 @@ public class SimpleImagePanelController : MonoBehaviour
         bool shouldShow = !objectToShow.activeSelf;
         objectToShow.SetActive(shouldShow);
 
-        // Остановка времени (если включено)
         if (pauseGame)
         {
             Time.timeScale = shouldShow ? 0f : 1f;
@@ -59,7 +53,6 @@ public class SimpleImagePanelController : MonoBehaviour
         {
             playerInRange = true;
 
-            // Меняем спрайт триггера (если задан newTriggerSprite)
             if (triggerSpriteRenderer != null && newTriggerSprite != null)
             {
                 triggerSpriteRenderer.sprite = newTriggerSprite;
@@ -73,13 +66,11 @@ public class SimpleImagePanelController : MonoBehaviour
         {
             playerInRange = false;
 
-            // Возвращаем исходный спрайт триггера
             if (triggerSpriteRenderer != null)
             {
                 triggerSpriteRenderer.sprite = originalTriggerSprite;
             }
 
-            // Автоматически скрываем картинку при выходе из зоны
             if (objectToShow != null)
             {
                 objectToShow.SetActive(false);

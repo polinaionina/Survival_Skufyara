@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using TMPro;
 
 public class EnemyWander : MonoBehaviour
 {
@@ -22,18 +24,17 @@ public class EnemyWander : MonoBehaviour
     private bool isActive = false;
     private bool aggressiveMode = false;
 
-    // Твои 4 угла маршрута
     private Vector2[] points = new Vector2[]
     {
-        new Vector2(69.902f, -12.132f), // влево
-        new Vector2(69.902f, -8.043f),  // вверх
-        new Vector2(71.653f, -8.043f),  // вправо
-        new Vector2(71.653f, -12.132f), // вниз (исходная точка)
+        new Vector2(69.902f, -12.132f),
+        new Vector2(69.902f, -8.043f),
+        new Vector2(71.653f, -8.043f),
+        new Vector2(71.653f, -12.132f),
     };
 
     private int currentTargetIndex = 0;
 
-    private float reachThreshold = 0.05f; // насколько близко подойти к точке, чтобы считать ее достигнутой
+    private float reachThreshold = 0.05f;
 
     void Start()
     {
@@ -41,7 +42,6 @@ public class EnemyWander : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        // Начинаем движение к первой точке
         currentTargetIndex = 0;
     }
 
@@ -54,16 +54,12 @@ public class EnemyWander : MonoBehaviour
 
         Vector2 direction = (targetPosition - currentPosition).normalized;
 
-        // Двигаемся к цели
         rb.linearVelocity = direction * speed;
 
-        // Меняем спрайт в зависимости от направления движения
         UpdateSprite(direction);
 
-        // Проверяем, достигли ли цель
         if (Vector2.Distance(currentPosition, targetPosition) < reachThreshold)
         {
-            // Следующая точка (по циклу)
             currentTargetIndex = (currentTargetIndex + 1) % points.Length;
         }
     }

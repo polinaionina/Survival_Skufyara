@@ -1,28 +1,22 @@
 using UnityEngine;
-using UnityEngine.UI; // Необходимо для работы с компонентом Image
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class PauseMenuManager : MonoBehaviour
 {
-    [Header("Ссылки на UI элементы")]
-    // Перетащите сюда ваш GameObject, который является корнем меню паузы 
-    // (например, PauseMenuRootImage, у которого Image компонент изначально выключен)
-    public GameObject pauseMenuRootObject; 
+    public GameObject pauseMenuRootObject;
 
-    [Header("Настройки сцен")]
     public string mainMenuSceneName = "MainMenu";
 
-    [Header("Ссылка на скрипт игрока")]
     public movee playerMoveScript;
 
     private bool isPaused = false;
-    private Image pauseMenuImageComponent; // Для кэширования компонента Image
+    private Image pauseMenuImageComponent;
 
     void Start()
     {
         if (pauseMenuRootObject != null)
         {
-            // Пытаемся получить компонент Image с корневого объекта меню паузы
             pauseMenuImageComponent = pauseMenuRootObject.GetComponent<Image>();
 
             if (pauseMenuImageComponent == null)
@@ -31,8 +25,6 @@ public class PauseMenuManager : MonoBehaviour
                                  "Если это контейнер с несколькими Image, убедитесь, что нужные включаются/выключаются.");
             }
             
-            // Изначально весь объект меню паузы деактивирован.
-            // Ваш Image компонент на нем и так выключен в инспекторе.
             pauseMenuRootObject.SetActive(false);
         }
         else
@@ -40,7 +32,6 @@ public class PauseMenuManager : MonoBehaviour
             Debug.LogError("Корневой объект меню паузы (pauseMenuRootObject) не назначен в инспекторе для PauseMenuManager!");
         }
 
-        // Поиск скрипта игрока, если не назначен
         if (playerMoveScript == null)
         {
             GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
@@ -76,9 +67,7 @@ public class PauseMenuManager : MonoBehaviour
     {
         if (pauseMenuRootObject != null)
         {
-            // 1. Активируем сам GameObject меню паузы
             pauseMenuRootObject.SetActive(true);
-            // 2. Включаем компонент Image, чтобы картинка стала видимой
             if (pauseMenuImageComponent != null)
             {
                 pauseMenuImageComponent.enabled = true;
@@ -97,12 +86,10 @@ public class PauseMenuManager : MonoBehaviour
     {
         if (pauseMenuRootObject != null)
         {
-            // 1. Выключаем компонент Image (возвращаем к вашему исходному состоянию в инспекторе)
             if (pauseMenuImageComponent != null)
             {
                 pauseMenuImageComponent.enabled = false;
             }
-            // 2. Деактивируем сам GameObject меню паузы
             pauseMenuRootObject.SetActive(false);
         }
         Time.timeScale = 1f;

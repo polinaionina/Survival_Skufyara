@@ -2,16 +2,11 @@ using UnityEngine;
 
 public class PickupItem : MonoBehaviour
 {
-    [Header("Настройки предмета")]
     public InventoryItem itemToPickup;
-    public bool NeededDestroy = true; // Уничтожать объект после подбора по умолчанию
+    public bool NeededDestroy = true;
 
-    [Header("Настройки уведомлений (необязательно)")]
-    [Tooltip("Включить показ уведомления при подборе предмета?")]
     public bool showNotificationOnPickup = false;
-    [Tooltip("Ссылка на контроллер панели уведомлений")]
     public NotificationPanelController notificationPanelController;
-    [Tooltip("Изображение для уведомления")]
     public Sprite notificationImage;
 
     private bool canPickup = false;
@@ -27,7 +22,6 @@ public class PickupItem : MonoBehaviour
 
                 if (added)
                 {
-                    // Показываем уведомление, если включено и настроено
                     if (showNotificationOnPickup)
                     {
                         if (notificationPanelController != null)
@@ -40,7 +34,6 @@ public class PickupItem : MonoBehaviour
                         }
                     }
 
-                    // Уничтожаем объект, если это необходимо
                     if (NeededDestroy)
                     {
                         Destroy(gameObject);
@@ -59,8 +52,6 @@ public class PickupItem : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             canPickup = true;
-            // Тут можно добавить визуальную подсказку для игрока, что предмет можно подобрать
-            // Например, показать текст "Нажмите F для подбора"
         }
     }
 
@@ -69,7 +60,6 @@ public class PickupItem : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             canPickup = false;
-            // Тут можно скрыть визуальную подсказку
         }
     }
 }

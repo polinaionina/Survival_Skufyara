@@ -5,7 +5,7 @@ public class QuestDisabler : MonoBehaviour
 
 
 {
-    public GameObject objectToDisable; // <- Назначаешь вручную в инспекторе
+    public GameObject objectToDisable;
 
     
     

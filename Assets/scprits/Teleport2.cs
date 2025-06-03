@@ -3,8 +3,8 @@ using System.Collections;
 
 public class Teleport2 : MonoBehaviour
 {
-    public Transform teleportTarget; // Куда телепортировать
-    public Teleport2 pairedTeleporter; // Связанный телепорт (перетащи в инспекторе)
+    public Transform teleportTarget;
+    public Teleport2 pairedTeleporter;
     public Sprite newSprite;
     public float CameraPosX, CameraPosY;
     private Sprite originalSprite;
@@ -71,27 +71,23 @@ public class Teleport2 : MonoBehaviour
     {
         if (player != null && teleportTarget != null && pairedTeleporter != null)
         {
-            // Отключаем парный телепорт на время, чтобы избежать бесконечного цикла
             pairedTeleporter.SetActive(false);
             
-            // Телепортируем игрока
             player.transform.position = teleportTarget.position;
             
-            // Перемещаем камеру (если нужно)
             Camera.main.transform.position = new Vector3(
                 CameraPosX,
                 CameraPosY,
                 Camera.main.transform.position.z
             );
             
-            // Через небольшой промежуток снова включаем парный телепорт
             StartCoroutine(EnablePairedTeleporter());
         }
     }
 
     private IEnumerator EnablePairedTeleporter()
     {
-        yield return new WaitForSeconds(0.5f); // Задержка перед повторным включением
+        yield return new WaitForSeconds(0.5f);
         pairedTeleporter.SetActive(true);
     }
 
