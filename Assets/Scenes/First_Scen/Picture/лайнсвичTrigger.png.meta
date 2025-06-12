@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 24b5cd343b8d0f34ab53fb65321598ac
+guid: e99faba55d488f547ae176bcb0be73c8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1371714975759487293
-    second: "\u043A\u043E\u0432\u0435\u0440 3_0"
-  - first:
-      213: 7879471632186376033
-    second: "\u043A\u043E\u0432\u0435\u0440 3_1"
-  - first:
-      213: 1326291393345957170
-    second: "\u043A\u043E\u0432\u0435\u0440 3_2"
-  - first:
-      213: -8251280783423616544
-    second: "\u043A\u043E\u0432\u0435\u0440 3_3"
+      213: 681803085589697275
+    second: "\u043B\u0430\u0439\u043D\u0441\u0432\u0438\u0447Trigger_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -105,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u043A\u043E\u0432\u0435\u0440 3_0"
+      name: "\u043B\u0430\u0439\u043D\u0441\u0432\u0438\u0447Trigger_0"
       rect:
         serializedVersion: 2
-        x: 117
-        y: 1466
-        width: 15
-        height: 15
+        x: 221
+        y: 244
+        width: 142
+        height: 164
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,74 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3cea5c84f70b6fce0800000000000000
-      internalID: -1371714975759487293
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u043A\u043E\u0432\u0435\u0440 3_1"
-      rect:
-        serializedVersion: 2
-        x: 131
-        y: 100
-        width: 1903
-        height: 1390
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 16f7c36c3b1895d60800000000000000
-      internalID: 7879471632186376033
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u043A\u043E\u0432\u0435\u0440 3_2"
-      rect:
-        serializedVersion: 2
-        x: 117
-        y: 87
-        width: 15
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 23d2b09cefee76210800000000000000
-      internalID: 1326291393345957170
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u043A\u043E\u0432\u0435\u0440 3_3"
-      rect:
-        serializedVersion: 2
-        x: 2010
-        y: 87
-        width: 15
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0e9470a38df8d7d80800000000000000
-      internalID: -8251280783423616544
+      spriteID: bf2d6534b40467900800000000000000
+      internalID: 681803085589697275
       vertices: []
       indices: 
       edges: []
@@ -223,10 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "\u043A\u043E\u0432\u0435\u0440 3_0": -1371714975759487293
-      "\u043A\u043E\u0432\u0435\u0440 3_1": 7879471632186376033
-      "\u043A\u043E\u0432\u0435\u0440 3_2": 1326291393345957170
-      "\u043A\u043E\u0432\u0435\u0440 3_3": -8251280783423616544
+      "\u043B\u0430\u0439\u043D\u0441\u0432\u0438\u0447Trigger_0": 681803085589697275
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
