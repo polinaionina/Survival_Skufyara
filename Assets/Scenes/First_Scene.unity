@@ -11041,6 +11041,7 @@ GameObject:
   - component: {fileID: 498040018}
   - component: {fileID: 498040017}
   - component: {fileID: 498040016}
+  - component: {fileID: 498040019}
   m_Layer: 5
   m_Name: 'AnswerButton '
   m_TagString: Untagged
@@ -11162,6 +11163,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 498040014}
   m_CullTransparentMesh: 1
+--- !u!114 &498040019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498040014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4b3f403b00064fe2964a540dab7c268, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &508699120
 GameObject:
   m_ObjectHideFlags: 0
@@ -27401,6 +27414,7 @@ GameObject:
   - component: {fileID: 1408226029}
   - component: {fileID: 1408226028}
   - component: {fileID: 1408226030}
+  - component: {fileID: 1408226031}
   m_Layer: 5
   m_Name: 'AnswerButton '
   m_TagString: Untagged
@@ -27522,6 +27536,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1408226031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408226026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4b3f403b00064fe2964a540dab7c268, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1431765602
 GameObject:
   m_ObjectHideFlags: 0
@@ -28003,6 +28029,8 @@ GameObject:
   - component: {fileID: 1443559510}
   - component: {fileID: 1443559509}
   - component: {fileID: 1443559511}
+  - component: {fileID: 1443559513}
+  - component: {fileID: 1443559512}
   m_Layer: 5
   m_Name: 'AnswerButton '
   m_TagString: Untagged
@@ -28124,6 +28152,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1443559512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443559507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4b3f403b00064fe2964a540dab7c268, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1443559513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443559507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f79d544c42641a5bc9703eea02dd296, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1445244975
 GameObject:
   m_ObjectHideFlags: 0
@@ -31583,6 +31635,7 @@ GameObject:
   - component: {fileID: 1603073958}
   - component: {fileID: 1603073957}
   - component: {fileID: 1603073959}
+  - component: {fileID: 1603073960}
   m_Layer: 5
   m_Name: 'AnswerButton '
   m_TagString: Untagged
@@ -31704,6 +31757,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1603073960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603073955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4b3f403b00064fe2964a540dab7c268, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1604517649
 GameObject:
   m_ObjectHideFlags: 0
