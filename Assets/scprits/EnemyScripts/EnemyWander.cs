@@ -27,8 +27,8 @@ public class EnemyWander : MonoBehaviour
     private Vector2[] points = new Vector2[]
     {
         new Vector2(69.902f, -12.132f),
-        new Vector2(69.902f, -8.043f),
-        new Vector2(71.653f, -8.043f),
+        new Vector2(69.902f, -9f),
+        new Vector2(71.653f, -9f),
         new Vector2(71.653f, -12.132f),
     };
 

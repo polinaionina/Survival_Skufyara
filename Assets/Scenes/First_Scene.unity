@@ -33526,7 +33526,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1674945523}
   - component: {fileID: 1674945522}
-  - component: {fileID: 1674945521}
+  - component: {fileID: 1674945524}
   m_Layer: 0
   m_Name: "\u041A\u0430\u043C\u0435\u0440\u0430 \u041A\u043E\u0440\u0438\u0434\u043E\u0440
     \u0422\u0420"
@@ -33535,20 +33535,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1674945521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1674945520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6721b0945e440af48ad88d45fcdcce6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameraInsidePoint: {fileID: 1674945523}
-  cameraOutsidePoint: {fileID: 881906622}
 --- !u!61 &1674945522
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33610,6 +33596,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1674945524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674945520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff2ce55bb8992ed4192e8799b68bf8c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraInsideCoordinates: {x: 69.92, y: -3.93, z: -0.07570706}
+  cameraOutsideCoordinates: {x: 70.4, y: -10.6, z: 0}
 --- !u!1 &1675275656
 GameObject:
   m_ObjectHideFlags: 0
