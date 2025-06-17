@@ -237,7 +237,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -93.77997, y: 84.17}
+  m_AnchoredPosition: {x: -93.77998, y: 84.17}
   m_SizeDelta: {x: -272.25998, y: -236.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &20313112
@@ -6492,7 +6492,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -37.099976, y: 3.8999634}
+  m_AnchoredPosition: {x: -37.09999, y: 3.8999634}
   m_SizeDelta: {x: -196.03, y: -115.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &275325657
@@ -8262,7 +8262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scaryMusic: {fileID: 8300000, guid: baae64e053a3a449fa766306591061a4, type: 3}
-  normalMusic: {fileID: 8300000, guid: 85a9712f8610b4caa9c6d5216065f6b5, type: 3}
+  normalMusic: {fileID: 8300000, guid: 91a5d9618f9d8454aa5604a9bf062af4, type: 3}
 --- !u!61 &349458482
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8938,6 +8938,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae8783a28edbb834bb1bf3f4b9f2ee94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeCanvas: {fileID: 0}
+  newSprite: {fileID: 0}
 --- !u!114 &385738529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8950,6 +8952,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ba7fd219a588452f8d6a340215ab366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  interactionKey: 102
 --- !u!82 &385738530
 AudioSource:
   m_ObjectHideFlags: 0
@@ -40837,8 +40841,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33979ba3d4469496ca1dee718ad2bde7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenuMusic: {fileID: 8300000, guid: 85a9712f8610b4caa9c6d5216065f6b5, type: 3}
-  gameplayMusic: {fileID: 8300000, guid: 85a9712f8610b4caa9c6d5216065f6b5, type: 3}
+  mainMenuMusic: {fileID: 8300000, guid: 91a5d9618f9d8454aa5604a9bf062af4, type: 3}
+  gameplayMusic: {fileID: 8300000, guid: 91a5d9618f9d8454aa5604a9bf062af4, type: 3}
 --- !u!4 &1956894691
 Transform:
   m_ObjectHideFlags: 0
