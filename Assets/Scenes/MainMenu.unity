@@ -761,6 +761,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1629069871}
   m_CullTransparentMesh: 1
+--- !u!1 &1761289270
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1761289272}
+  - component: {fileID: 1761289271}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1761289271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761289270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 250af66e78f8c544fae981bd40c85424, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetImage: {fileID: 1629069873}
+  button1: {fileID: 1410282128}
+  button2: {fileID: 1883159076}
+  defaultSprite: {fileID: -1921771800310160061, guid: 0a27d481c41cfa04e82befc57c4787b8, type: 3}
+  button1HoverSprite: {fileID: -4602477380796518276, guid: f64e2350eca66ee4eb686db87f5ae7ce, type: 3}
+  button2HoverSprite: {fileID: 4526345688342005494, guid: 8e71afdb31918054c9e3d9e288356f3a, type: 3}
+--- !u!4 &1761289272
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761289270}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.45927382, y: -0.773465, z: -0.063960694}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1883159074
 GameObject:
   m_ObjectHideFlags: 0
@@ -1117,3 +1167,4 @@ SceneRoots:
   - {fileID: 947461959}
   - {fileID: 2042143744}
   - {fileID: 759677088}
+  - {fileID: 1761289272}
